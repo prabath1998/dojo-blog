@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 const Home = () => {
 
+    // let name = 'mario';
+    const [name,setName] = useState('prabath');
+    const [age, setAge] = useState(25);
+
     const handleClick = (e) => {
-        console.log('Hello,guys',e);
+       setName('udayanga');
+       setAge(30);
     }
 
     const handleClickAgain = (name,e) => {
@@ -12,7 +19,8 @@ const Home = () => {
         <div className="home">
             <h2>Homepage</h2>
             <button onClick={handleClick}>Click Me</button>
-            <button onClick={(e) => handleClickAgain('mario',e)}>Click</button>
+            {/* <button onClick={(e) => handleClickAgain('mario',e)}>Click</button> */}
+            <p>{name} is {age} years old</p>
         </div>
      );
 }
