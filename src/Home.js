@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log(name);
-  },[name]);
+  },[]);
 
   return <div className="home">
     <BlogList blogs={blogs} title={"All Blogs!"} handleDelete={handleDelete}/>
